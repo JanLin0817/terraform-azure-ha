@@ -73,14 +73,14 @@ resource "azurerm_linux_virtual_machine" "vm" {
 }
 
 resource "azurerm_virtual_machine_extension" "network_watcher" {
-  for_each             = var.vm_instances
-  name                 = "NetworkWatcherAgentLinux"
-  virtual_machine_id   = azurerm_linux_virtual_machine.vm[each.key].id
-  publisher            = "Microsoft.Azure.NetworkWatcher"
-  type                 = "NetworkWatcherAgentLinux"
-  type_handler_version = "1.4"
+  for_each                   = var.vm_instances
+  name                       = "NetworkWatcherAgentLinux"
+  virtual_machine_id         = azurerm_linux_virtual_machine.vm[each.key].id
+  publisher                  = "Microsoft.Azure.NetworkWatcher"
+  type                       = "NetworkWatcherAgentLinux"
+  type_handler_version       = "1.4"
   auto_upgrade_minor_version = true
-  tags                 = var.common_tags
+  tags                       = var.common_tags
 }
 
 resource "azurerm_virtual_machine_extension" "azure_monitor" {

@@ -87,5 +87,5 @@ resource "azurerm_virtual_machine_extension" "antimalware" {
         }
     }
 SETTINGS
-  tags = var.common_tags
+  tags     = var.common_tags
 }
