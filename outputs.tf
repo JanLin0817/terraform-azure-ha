@@ -53,3 +53,11 @@ output "vmwindows_private_ip" {
 output "vmwindows_public_ip" {
   value = module.vmwindows.vm_public_ip
 }
+
+output "load_balancer_name" {
+  value = module.loadbalancer.lb_name
+}
+
+output "database_name" {
+  value = module.database.db_name
+}

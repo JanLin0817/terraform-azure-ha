@@ -39,3 +39,20 @@ module "vmwindows" {
   storage_account_uri = module.common.sa_primary_blob_endpoint
   depends_on          = [module.network, module.common]
 }
+
+module "loadbalancer" {
+  source              = "./modules/loadbalancer-n01742406"
+  resource_group_name = module.rgroup.resource_group_name
+  location            = var.location
+  common_tags         = var.common_tags
+  linux_nic_ids       = module.vmlinux.vm_nic_ids
+  depends_on          = [module.vmlinux]
+}
+
+module "database" {
+  source              = "./modules/database-n01742406"
+  resource_group_name = module.rgroup.resource_group_name
+  location            = var.location
+  common_tags         = var.common_tags
+  depends_on          = [module.rgroup]
+}
