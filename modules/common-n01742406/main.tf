@@ -8,6 +8,7 @@ resource "azurerm_log_analytics_workspace" "law" {
 }
 
 resource "azurerm_recovery_services_vault" "rsv" {
+  count = 0
   name                = "n01742406-rsv"
   location            = var.location
   resource_group_name = var.resource_group_name
