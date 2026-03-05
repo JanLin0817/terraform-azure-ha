@@ -56,3 +56,12 @@ module "database" {
   common_tags         = var.common_tags
   depends_on          = [module.rgroup]
 }
+
+module "datadisk" {
+  source              = "./modules/datadisk-n01742406"
+  resource_group_name = module.rgroup.resource_group_name
+  location            = var.location
+  common_tags         = var.common_tags
+  virtual_machine_ids = concat(module.vmlinux.vm_ids, module.vmwindows.vm_ids)
+  depends_on          = [module.vmlinux, module.vmwindows]
+}

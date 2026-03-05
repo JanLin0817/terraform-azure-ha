@@ -17,3 +17,7 @@ output "vm_public_ips" {
 output "vm_nic_ids" {
   value = values(azurerm_network_interface.nic)[*].id
 }
+
+output "vm_ids" {
+  value = values(azurerm_linux_virtual_machine.vm)[*].id
+}
