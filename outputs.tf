@@ -37,3 +37,19 @@ output "vm_private_ips" {
 output "vm_public_ips" {
   value = module.vmlinux.vm_public_ips
 }
+
+output "vmwindows_hostname" {
+  value = module.vmwindows.vm_hostname
+}
+
+output "vmwindows_fqdn" {
+  value = module.vmwindows.vm_fqdn
+}
+
+output "vmwindows_private_ip" {
+  value = module.vmwindows.vm_private_ip
+}
+
+output "vmwindows_public_ip" {
+  value = module.vmwindows.vm_public_ip
+}

@@ -29,3 +29,13 @@ module "vmlinux" {
   storage_account_uri = module.common.sa_primary_blob_endpoint
   depends_on          = [module.network, module.common]
 }
+
+module "vmwindows" {
+  source              = "./modules/vmwindows-n01742406"
+  resource_group_name = module.rgroup.resource_group_name
+  location            = var.location
+  common_tags         = var.common_tags
+  subnet_id           = module.network.subnet_id
+  storage_account_uri = module.common.sa_primary_blob_endpoint
+  depends_on          = [module.network, module.common]
+}
