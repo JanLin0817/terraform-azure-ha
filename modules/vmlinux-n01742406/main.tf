@@ -1,3 +1,9 @@
+# Docs:
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/availability_set
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_extension
 resource "azurerm_availability_set" "avs" {
   name                         = "n01742406-avs"
   location                     = var.location

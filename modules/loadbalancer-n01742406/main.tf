@@ -1,3 +1,10 @@
+# Docs:
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_backend_address_pool
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface_backend_address_pool_association
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_probe
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_rule
 resource "azurerm_public_ip" "lb_pip" {
   name                = "${var.lb_name}-pip"
   location            = var.location

@@ -1,3 +1,4 @@
+# Docs: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server
 resource "azurerm_postgresql_flexible_server" "db" {
   # single instance is deprecated
   name                   = var.db_name

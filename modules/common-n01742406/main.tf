@@ -1,3 +1,7 @@
+# Docs:
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_workspace
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/recovery_services_vault
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
 resource "azurerm_log_analytics_workspace" "law" {
   name                = "n01742406-law"
   location            = var.location

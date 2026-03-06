@@ -1,3 +1,6 @@
+# Docs:
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment
 resource "azurerm_managed_disk" "disk" {
   count                = length(var.virtual_machine_ids)
   name                 = "datadisk-vm-${count.index + 1}"

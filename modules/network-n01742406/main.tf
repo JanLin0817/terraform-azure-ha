@@ -1,3 +1,7 @@
+# Docs:
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet
+# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group
 resource "azurerm_virtual_network" "vnet" {
   name                = var.network_vnet_name
   address_space       = var.network_address_space
