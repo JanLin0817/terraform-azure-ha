@@ -6,7 +6,14 @@ resource "null_resource" "display_hostnames" {
   }
 
   provisioner "remote-exec" {
-    inline = ["echo 'Hostname: ' $(hostname)"]
+    inline = [
+      "echo 'Hostname: ' $(hostname)",
+      "sudo dnf install -y nginx",
+      "sudo systemctl start nginx",
+      "sudo systemctl enable nginx",
+      "sudo firewall-cmd --permanent --add-service=http",
+      "sudo firewall-cmd --reload"
+    ]
 
     connection {
       type        = "ssh"
